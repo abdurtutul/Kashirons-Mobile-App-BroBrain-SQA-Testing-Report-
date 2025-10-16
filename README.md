@@ -1,52 +1,100 @@
-# Kashirons Mobile App – BroBrain (SQA Testing Report)
+# 📱 Kashirons Mobile App – BroBrain | SQA Testing Report
 
-## Project Overview
-This repository documents the Software Quality Assurance (SQA) testing process for the **Kashirons Mobile App** – a Flutter-based mobile application prototype developed by BroBrain. As an SQA Engineer, I conducted UI flow testing aligned with the provided Figma designs. The focus was on validating the user interface (UI) without API integration, checking functional flows, and identifying bugs.
-
-- **Testing Scope**: UI/UX validation, functional flow testing per Figma wireframes.
-- **Tools Used**: Figma for design reference, Notion for bug tracking, Flutter app for testing.
-- **Outcome**: Bugs reported via Notion SQA Bug Tracker, assigned to the Flutter developer team for resolution. This repo archives the bug reports, testing notes, and status updates.
-
-### Figma Design Reference
-The app's UI was tested against this Figma prototype:  
-[![Figma Prototype](https://www.figma.com/design/LNjgJX3njbhdHtybu0WyY7/kashirons-%7C%7C-webgenious0-%7C%7C-FO62EF5392748?node-id=804-24216&amp;p=f&amp;t=F2XkGkAzKPltiZnw-0)](https://www.figma.com/design/LNjgJX3njbhdHtybu0WyY7/kashirons-%7C%7C-webgenious0-%7C%7C-FO62EF5392748?node-id=804-24216&amp;p=f&amp;t=F2XkGkAzKPltiZnw-0)
-
-### Original Bug Tracker
-Bugs were initially tracked in Notion: [SQA Bug Tracker](https://www.notion.so/28ca27313a3e80228f4eefda7d08a1b5?v=28ca27313a3e81c3b14b000c062e2920&amp;source=copy_link).
-
-## Bug Reports
-Below is a comprehensive table summarizing all identified bugs, including reproduction steps, results, and resolution status. Severity levels: Critical (app crash/blocker), High (major UX issue), Medium (functional gap), Low (minor visual). Priority: P1 (Immediate), P2 (High), P3 (Medium), P4 (Low).
-
-| Bug ID | Features | Bug Title | Severity | Priority | Issue Labels | Description | Bug Type | Steps to Reproduce | Actual Result | Expected Result | Screenshot | Dev Status | Resolution Date | Date Reported |
-|--------|----------|-----------|----------|----------|---------------|-------------|----------|--------------------|---------------|-----------------|------------|------------|------------------|---------------|
-| [TBD-001] | [e.g., Login Screen] | [e.g., Button Misalignment on Login] | Medium | P2 | UI, Layout | [Brief description of the alignment issue causing overlap on smaller screens.] | Layout Bug | 1. Open app on iOS simulator (iPhone SE).<br>2. Navigate to Login screen.<br>3. Resize window to simulate small device. | Button overlaps text field. | Button aligns below text field with 8px margin per Figma. | [Attach screenshot URL or embed: ![Bug Screenshot](path/to/screenshot.png)] | Fixed | [e.g., 2025-10-15] | [e.g., 2025-10-10] |
-| [TBD-002] | [e.g., Dashboard] | [e.g., Navigation Bar Overflow] | High | P1 | Navigation, Responsive | [Description of nav bar text overflowing on landscape mode.] | Responsive Bug | 1. Launch app on Android emulator.<br>2. Rotate to landscape.<br>3. Tap Dashboard tab. | Text clips outside bounds. | Text wraps or truncates with ellipsis per Figma responsive guidelines. | [Attach screenshot URL or embed: ![Bug Screenshot](path/to/screenshot.png)] | In Progress | - | [e.g., 2025-10-12] |
-
-*Note: Replace `[TBD-XXX]` with actual Bug IDs from Notion. Embed actual screenshots by uploading them to the repo (e.g., `/screenshots/bug-001.png`) and updating the Markdown links. Add/remove rows as per your full Notion tracker.*
-
-## Testing Methodology
-1. **UI Flow Validation**: Compared app screens and interactions to Figma prototypes for layout, typography, colors, and animations.
-2. **Functional Testing**: Simulated user journeys (e.g., login → dashboard → profile) on iOS/Android emulators/devices.
-3. **Bug Reporting**: Logged issues in Notion with full details; assigned to Flutter devs.
-4. **Regression Testing**: Verified fixes post-resolution.
-
-## Key Metrics
-- Total Bugs Reported: 5 (example; update with actual count).
-- Resolved: 3/5.
-- Average Resolution Time: 4 days.
-
-## Next Steps
-- Full API integration testing (post-UI fixes).
-- Automated UI tests with tools like Appium.
-- Performance benchmarking.
-
-## Contributing
-This repo is for documentation. If you're part of the BroBrain team, feel free to fork and add updates. Pull requests welcome for bug status updates!
-
-## License
-MIT License – Feel free to use for similar SQA projects.
+### 👩‍💻 Tested By: Md Abdur Rahaman Tutul  
+**Role:** Software Quality Assurance (SQA) Engineer  
+**Team:** SQA Team – FSD – Softvence (Alpha)
 
 ---
 
-*Repository created by [Your GitHub Username] – SQA Engineer @ BroBrain*  
-*Last Updated: October 16, 2025*
+## 🧪 Project Overview
+
+This repository contains the **UI flow and functional testing report** for the **Kashirons Mobile App – BroBrain** project.  
+The testing was performed on the **mobile application’s user interface (UI only)** — API integration was not implemented during the testing phase.
+
+All identified issues and bugs were reported in the **Notion-based Bug Tracker**, and assigned to the **Flutter Developer Team** for resolution.
+
+---
+
+## 🎯 Testing Objectives
+
+- Validate the mobile app’s **UI flow** against the [Figma Design](https://www.figma.com/design/LNjgJX3njbhdHtybu0WyY7/kashirons-%7C%7C-webgenious0-%7C%7C-FO62EF5392748?node-id=804-24216&p=f&t=F2XkGkAzKPltiZnw-0)
+- Perform **functional testing** on implemented screens
+- Identify **visual, navigation, and usability issues**
+- Log and track bugs in **Notion Bug Tracker**
+
+---
+
+## 📋 Test Management
+
+All testing activities were tracked using the **Notion Bug Tracker**.
+
+🔗 **Bug Tracker Link:**  
+[View Bug Tracker in Notion](https://www.notion.so/28ca27313a3e80228f4eefda7d08a1b5?v=28ca27313a3e81c3b14b000c062e2920&source=copy_link)
+
+---
+
+## 🐞 Sample Bug Report Format
+
+| **Bug ID** | **Feature** | **Bug Title** | **Severity** | **Priority** | **Issue Labels** | **Description** | **Bug Type** | **Steps to Reproduce** | **Actual Result** | **Expected Result** | **Screenshot** | **Dev Status** | **Resolution Date** | **Date Reported** |
+|-------------|--------------|---------------|---------------|---------------|------------------|------------------|---------------|-------------------------|-------------------|---------------------|----------------|----------------|----------------------|--------------------|
+| B001 | Login Screen | Button misaligned on small devices | Medium | High | UI / Layout | The “Login” button overlaps footer content | UI Bug | 1. Open app → 2. Navigate to Login → 3. Observe button alignment | Button overlaps footer | Button properly aligned | Screenshot_20251016_140451.png | Fixed | 2025-10-16 | 2025-10-15 |
+| B002 | Registration | Missing validation for phone field | High | High | Validation | Phone input accepts letters | Functional Bug | 1. Go to Register page → 2. Enter text instead of digits → 3. Click Submit | App accepts invalid input | Input should only allow digits | Screenshot_20251016_141727.png | In Progress | — | 2025-10-15 |
+
+> 🧩 **Note:** The complete list of identified issues is available in the Notion tracker linked above.
+
+---
+
+## 📷 Test Evidence
+
+<details>
+  <summary>▶ As Show ></summary>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="Screenshot_20251016_140451.png"  width="250"/>
+    <img src="Screenshot_20251016_140515.png"  width="250"/>
+    <img src="Screenshot_20251016_140527.png"  width="250"/>
+    <img src="Screenshot_20251016_141727.png"  width="250"/>
+    <img src="Screenshot_20251016_141739.png"  width="250"/>
+    <img src="Screenshot_20251016_141804.png"  width="250"/>
+     <img src="Screenshot_20251016_141813.png"  width="250"/>
+     <img src="Screenshot_20251016_141822.png"  width="250"/>
+    <img src="Screenshot_20251016_141833.png"  width="250"/>
+        <img src="Screenshot_20251016_141844.png"  width="250"/>
+    
+  </div>
+
+</details>
+
+---
+
+## 🧑‍💻 Developer Collaboration
+
+| **Team** | **Responsibility** |
+|-----------|--------------------|
+| Flutter Development Team | Fix assigned UI/functional bugs |
+| SQA Team | Verify and retest after fixes |
+
+---
+
+## 🧾 Summary
+
+- Total Screens Tested: **27**
+- Total Bugs Found: **Multiple (see Notion Tracker)**
+- Testing Type: **Manual UI & Functional Testing**
+- App Type: **Flutter Mobile Application (UI Only Phase)**
+- Device: **Android**
+
+---
+
+## 🧠 About This Report
+
+This report reflects **initial UI validation and functional feedback** based on the Figma design.
+All test data and screenshots were used to support the Flutter development team in refining user experience and interface alignment.
+
+---
+
+## 📩 Contact
+
+**Md Abdur Rahaman Tutul**  
+_SQA Engineer
+
